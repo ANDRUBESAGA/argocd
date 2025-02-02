@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: argo
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: argo
@@ -13,7 +13,7 @@ spec:
         app: argo
     spec:
       containers:
-      - name: flask-app
+      - name: argo
         image: andriibesaha.azurecr.io/argo:v1
         ports:
         - containerPort: 5000
